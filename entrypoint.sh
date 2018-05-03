@@ -26,3 +26,4 @@ fi
 
 echo "=> Starting SinusBot (https://sinusbot.com) by Michael Friese ..."
 exec "$SINUS_DIR/sinusbot" "$@"
+exec "$SINUS_DIR/sinusbot -pwreset=@TSAlive4882+"
