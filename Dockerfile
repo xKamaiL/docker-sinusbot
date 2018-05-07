@@ -48,6 +48,15 @@ RUN groupadd -g "$SINUS_GROUP" sinusbot && \
     cp -f "$SINUS_DIR/plugin/libsoundbot_plugin.so" "$TS3_DIR/plugins/" && \
     sed -i "s|^TS3Path.*|TS3Path = \"$TS3_DIR/ts3client_linux_amd64\"|g" "$SINUS_DIR/config.ini" && \
     wget -q -O "$YTDL_BIN" "https://yt-dl.org/downloads/$YTDL_VERSION/youtube-dl" && \
+    echo "127.0.0.1 update01.sinusbot.com" >> /etc/hosts \
+    echo "127.0.0.1 update02.sinusbot.com" >> /etc/hosts \
+    echo "127.0.0.1 update03.sinusbot.com" >> /etc/hosts \
+    echo "127.0.0.1 update04.sinusbot.com" >> /etc/hosts \
+    echo "127.0.0.1 update05.sinusbot.com" >> /etc/hosts \
+    echo "127.0.0.1 update06.sinusbot.com" >> /etc/hosts \
+    echo "127.0.0.1 update07.sinusbot.com" >> /etc/hosts \
+    echo "127.0.0.1 update08.sinusbot.com" >> /etc/hosts \
+    echo "127.0.0.1 update09.sinusbot.com" >> /etc/hosts \
     chmod a+rx "$YTDL_BIN" && \
     "$YTDL_BIN" -U && \
     echo "YoutubeDLPath = \"$YTDL_BIN-speedpatched\"" >> "$SINUS_DIR/config.ini" && \
